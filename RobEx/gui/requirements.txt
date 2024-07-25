@@ -1,0 +1,11 @@
+opencv-python
+PyQt5>=5.14.0
+pyqtgraph>=0.10.0
+nptyping
+pyrealsense2
+numpy
+json
+PyDataSocket
+codecs
+pyk4a
+configargparse

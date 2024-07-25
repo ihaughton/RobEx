@@ -1,0 +1,105 @@
+{
+    "dataset": {
+        "ims_file": "",
+        "format": "replica"
+    },
+    "optimizer": {
+        "args":{
+            "lr": 0.0014,
+            "weight_decay": 0.013,
+            "pose_lr": 0.004
+        }
+    },
+    "trainer": {
+        "epochs": 1000000,
+        "scale": 1000.0
+    },
+    "render": {
+        "n_rays": 180,
+        "depth_range": [0.15, 3.5],
+        "n_bins": 32,
+        "bins_fine": 5,
+        "pyramid_levels": 3,
+        "iters_per_level": 10,
+        "kernel_init": 14,
+        "iters_per_kf": 20,
+        "iters_per_frame": 5,
+        "kf_dist_th": 0.05,
+        "kf_pixel_ratio": 0.65
+    },
+    "model": {
+        "noise_std": 0.3,
+        "noise_kf": 0.1,
+        "noise_frame": 0.1,
+        "color_scaling": 5.0,
+        "gt_traj": 0,
+        "gt_scene": 0,
+        "embed_type": "gauss",
+        "keyframe_select": 1,
+        "window_size": 5,
+        "n_rays_is_kf": 200,
+        "do_tsdf": 0,
+        "hidden_layers_block": 1,
+        "hidden_feature_size": 256,
+        "gauss_embed":{
+            "std": 30,
+            "size": 96
+         },
+         "uni_dirs_embed":{
+            "n_dirs": 10,
+            "n_funcs": 8
+         },
+         "axis_embed":{
+            "n_funcs": 9
+         },
+         "mip_embed":{
+            "n_funcs": 9
+         }
+    },
+    "track": {
+        "lr": 0.007,
+        "max_iters": 6,
+        "min_iters": 5,
+        "delta_th": 0.0025,
+        "track_color": 0,
+        "n_rays_track": 220,
+        "n_bins_track": 40,
+        "n_bins_fine_track": 10
+
+    },
+    "semantics": {
+        "n_classes": 12,
+        "do_hierarchical": 0,
+        "h_levels": 2,
+        "do_names": 0,
+        "label_cam": 0,
+        "n_points_per_scribble": 10
+
+    },
+    "camera": {
+        "sensor": "Azure",
+        "w": 1280,
+        "h": 720,
+        "fx": 610.274414,
+        "fy": 610.202942,
+        "cx": 639.089478,
+        "cy": 367.630157,
+        "mw": 40,
+        "mh": 20,
+        "k1": 0.657326,
+        "k2": -2.806669,
+        "k3": 1.560503,
+        "k4": 0.530181,
+        "k5": -2.625473,
+        "k6": 1.487417,
+        "p1": 0.000529,
+        "p2": -0.000321
+    },
+    "vis": {
+        "n_bins_fine_vis": 10,
+        "im_vis_reduce": 12
+    },
+    "kinect": {
+        "config_file": ""
+    }
+}
